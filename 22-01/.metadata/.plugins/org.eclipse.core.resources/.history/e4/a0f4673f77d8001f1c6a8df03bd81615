@@ -1,0 +1,18 @@
+package oops;
+public class Test {
+	public static void main(String[] args) {
+		Student Kunal = new Student(15,"Kunal",99.1f);
+		System.out.print(Kunal.roll);
+		System.out.print(Kunal.name);
+		System.out.print(Kunal.mark);
+		
+		Student random = new Student(Kunal);
+		System.out.print(random.name);
+		Student random2 = new Student();
+		System.out.print(random2.name);
+		Student one = new Student();
+		Student two = one;
+		one.name = "hello honey bonny";
+		System.out.print(two.name);
+	}
+}

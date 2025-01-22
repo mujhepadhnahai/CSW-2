@@ -1,0 +1,16 @@
+package oops;
+
+public class Student {
+         int roll;
+         String name;
+         
+         Student(int i, String string) {
+        	 roll = a;
+        	 name = b;
+		}
+         void print() {
+        	 System.out.print("Student details:");
+        	 System.out.print("Name :"+name);
+        	 System.out.print("Roll :"+roll);
+         }
+}
