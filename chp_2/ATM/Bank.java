@@ -14,7 +14,7 @@ public class Bank{
                 atm.verify();
             }catch(Exception c){
                 System.out.println("Card Blocked");
-                System.out.exit(0);
+               
             }
            }
         }

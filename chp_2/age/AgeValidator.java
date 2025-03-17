@@ -1,9 +1,7 @@
 import java.util.Scanner;
-
 public class AgeValidator {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        
+        Scanner scanner = new Scanner(System.in);    
         try {
             System.out.print("Enter your age: ");
             int age = scanner.nextInt();
@@ -28,3 +26,16 @@ public class AgeValidator {
         }
     }
 }
+/*
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+Enter your age: 14
+Error: Age is under 18. You are not allowed.
+
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+Enter your age: 45
+Your age is valid. Welcome!
+
+Picked up JAVA_TOOL_OPTIONS: -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8
+Enter your age: 66
+Error: Age is over 65. You are considered overage.
+*/
