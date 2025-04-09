@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+public class q3 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        StringBuffer text = new StringBuffer();
+
+        while (true) {
+            System.out.println("\n--- Simple Text Editor ---\n1. Append Text\n2. Insert Text\n3. Delete Text\n4. Reverse Text\n5. Replace Text\n6. Exit\nChoose an option: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter text to append: ");
+                    text.append(scanner.nextLine());
+                    break;
+                case 2:
+                    System.out.print("Enter text to insert: ");
+                    String insertText = scanner.nextLine();
+                    System.out.print("Enter index: ");
+                    int insertIndex = scanner.nextInt();
+                    scanner.nextLine();
+                    if (insertIndex >= 0 && insertIndex <= text.length()) text.insert(insertIndex, insertText);
+                    else System.out.println("Invalid index!");
+                    break;
+                case 3:
+                    System.out.print("Enter start index: ");
+                    int startIndex = scanner.nextInt();
+                    System.out.print("Enter end index: ");
+                    int endIndex = scanner.nextInt();
+                    scanner.nextLine();
+                    if (startIndex >= 0 && endIndex <= text.length() && startIndex < endIndex) text.delete(startIndex, endIndex);
+                    else System.out.println("Invalid indices!");
+                    break;
+                case 4:
+                    text.reverse();
+                    break;
+                case 5:
+                    System.out.print("Enter start index: ");
+                    int replaceStart = scanner.nextInt();
+                    System.out.print("Enter end index: ");
+                    int replaceEnd = scanner.nextInt();
+                    scanner.nextLine();
+                    System.out.print("Enter replacement text: ");
+                    String replaceText = scanner.nextLine();
+                    if (replaceStart >= 0 && replaceEnd <= text.length() && replaceStart < replaceEnd) text.replace(replaceStart, replaceEnd, replaceText);
+                    else System.out.println("Invalid indices!");
+                    break;
+                case 6:
+                    System.out.println("Exiting...");
+                    scanner.close();
+                    return;
+                default: 
+                    System.out.println("Invalid choice! Please try again.");
+            }
+            System.out.println("Current Text: " + text + "\nLength: " + text.length() + ", Capacity: " + text.capacity());
+        }
+    }
+}

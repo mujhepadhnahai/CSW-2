@@ -1,0 +1,13 @@
+copy constructor
+---------------
+public Point(int x,int y) {this.x=x;this.y=y;}
+public Point(Point other) {this.x =other.x;this.y = other.y;}
+Point p = new Point(2,7);
+Point q = new Point(p);
+
+asgn_q7: capsulation, abstraction, and inheritance
+--------------------------------------------------
+
+
+
+
